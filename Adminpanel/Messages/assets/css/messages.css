@@ -1,0 +1,364 @@
+/*Google Font Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --color-background-light: #FFF;
+    --color-background-light2:#E4E9EE8F;
+    --color-background-badge: #E4E9EE8F;
+    --color-border: #dbdade;
+    --color-input : #FFF;
+    --color-label: #000;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --duration: 0.3s;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-background-light: #4b4b4ba3;
+    --color-background-light2:#6969697d;
+    --color-background-badge: #43484d8f;
+    --color-border: #3b3b3b;
+    --color-label: #939393;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --color-input: rgb(35 35 35 / 18%);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100vw;
+    font-family: 'Rajdhani', sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+a{
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-2);
+}
+/* end scrollbar */
+
+/* start header */
+
+#header {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    display: block;
+    height: 70px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .profile {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .profile {
+        padding: 0px;
+    }
+}
+
+
+.navbar .profile .dark-mode {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-2);
+    margin-right: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .profile .dark-mode span{
+    color: var(--color-dark);
+    font-size: 15px;
+    text-align: center;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.navbar .profile .dark-mode span.active {
+    background-color: var(--color-primary);
+    color: #FFF;
+    border-radius: var(--border-radius-2);
+    cursor: auto;
+}
+
+.navbar .profile .profile-info {
+    display: flex;
+    cursor: pointer;
+}
+
+.navbar .profile .profile-info p {
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.navbar .profile .profile-info small {
+    color: var(--color-dark-variant);
+}
+
+.navbar .profile .profile-info .info {
+    padding: 0px 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .profile .profile-info .info {
+        padding: 0px 10px;
+    }
+}
+
+.navbar .profile .profile-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .header .navbar-brand {
+        padding: 0px;
+    }
+
+}
+
+.header .navbar-brand img {
+    width: 120px;
+    height: 55px;
+    margin-right: 10px;
+}
+/* end header */
+
+/*start general card style */
+.card {
+    background-color: var(--color-white) !important;
+    padding: 30px;
+}
+
+@media (max-width: 768px) { 
+
+    .card {
+        padding: 30px 10px;
+    }   
+
+    .card-body {
+        padding: 0px;
+    }
+
+ }
+
+.card-title {
+    padding: 15px;
+    border: 1px dashed rgb(110 174 213);
+    border-radius: 5px;
+}
+
+.main-title span {
+    color: var(--color-dark);
+}
+
+.card-title  .main-title-icon {
+    background-color: #99b1b724;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #787884d4;
+    border-radius: 5px;
+    
+}
+
+/* start profile */
+.profile-container {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+.profile-container .message-details {
+    background-color: var(--color-background-light);
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 100%;
+    padding: 15px;
+}
+
+.profile-container .message-details h2 ,
+ .profile-container .message-details h5 ,
+.profile-container .message-details h4 {
+    color: var(--color-dark);
+}
+
+
+
+.profile-container .message-details .message-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    margin: 50px 0px 15px;
+}
+
+@media (max-width: 768px) { 
+
+    .profile-container .message-details .message-details-header {
+        padding: 10px 10px;
+    }
+
+ }
+
+.profile-container .message-details .message-details-header h2 {
+    font-size: 24px;
+}
+
+
+
+.profile-container .message-details .message-details-content p{
+    width: 500px;
+    overflow: hidden;
+    padding: 0px 50px
+}
+
+
+@media only screen and (max-width: 768px) {
+    .profile-container .message-details .message-details-header h2 {
+        font-size: 18px;
+    }
+    
+    .profile-container .message-details .message-details-header h3 {
+        font-size: 14px;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    .profile-container .message-details .message-details-content p{
+        width: 100%;
+        overflow: hidden;
+        padding: 0px;
+        text-align: center;
+    }
+} 
+
+
+
+
+
+.profile-container .message-details .message-details-body{
+    margin: 50px 50px 20px;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .profile-container .message-details .message-details-body{
+        margin: 50px 10px 20px;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+    }
+} 
+
+
+/* loading */
+.overlay-loading {
+    background-color: #FFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000000000;
+    
+}
+
+/* end profile */

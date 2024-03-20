@@ -1,0 +1,307 @@
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --color-background-light: #FFF;
+    --color-background-light2:#E4E9EE8F;
+    --color-background-badge: #E4E9EE8F;
+    --color-border: #dbdade;
+    --color-input : #FFF;
+    --color-label: #000;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --duration: 0.3s;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-background-light: #4b4b4ba3;
+    --color-background-light2:#6969697d;
+    --color-background-badge: #43484d8f;
+    --color-border: #3b3b3b;
+    --color-label: #939393;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --color-input: rgb(35 35 35 / 18%);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+/* start swal modify */
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning.swal2-show {
+    border: 1px solid var(--color-border) !important;
+
+}
+
+/* end swal modify */
+
+/* start bootstrap modify */
+.dropdown-menu[data-bs-popper] {
+    background-color: var(--color-white) !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    top: 100%;
+    left: 0px;
+    margin-top: var(--bs-dropdown-spacer);
+    border-radius: 3px;
+    border: 1px solid var(--color-border) !important;
+}
+
+.dropdown-menu[data-bs-popper] > li a {
+    color: var(--color-dark) !important;
+}
+
+.form-floating>.form-control:not(:placeholder-shown)~label::after {
+    background-color: transparent !important;
+}
+
+.form-floating>.form-control:not(:placeholder-shown)~label::before {
+    background-color: transparent !important;
+}
+
+.form-floating label {
+    color: var(--color-label) !important;
+}
+/* end bootstrap modify */
+
+
+/* start datatables style */
+
+.role-badge {
+    display:inline-block; padding:0px 15px; 
+    background-color: var(--color-background-badge); 
+    color: #0989FF; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+    border-radius:3px
+}
+
+.watch-message {
+    background-color: var(--color-background-badge);
+    color: #8478ff !important;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+}
+
+.delete-message {
+    background-color: var(--color-background-badge);
+    color: #dd4b39 !important;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+}
+
+.dataTables_filter .form-control {
+    background-color: var(--color-input) !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-dark); 
+}
+
+.dataTables_length .form-select {
+    background-color: var(--color-input) !important;
+    border: 1px solid var(--color-border);
+}
+
+.dataTables_length .form-select{
+    color: var(--color-dark) !important;
+}
+
+.dataTables_length .form-select option {
+    color: #000 !important;
+}
+
+.dt-buttons
+{
+    direction: ltr !important;
+}
+
+.dt-button-collection {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark);
+}
+
+.dt-button-collection {
+    border: 1px solid var(--color-border) !important;
+}
+
+.dt-button.btn-label-primary {
+    background-color: var(--color-background-badge) !important;
+}
+
+.dt-button.btn-label-primary:hover {
+    background-color: var(--color-background-badge) !important;
+}
+
+.emp_name a.text-dark , .sorting_1 , .js-update , .sorting , .sorting_disabled {
+    color: var(--color-dark) !important;
+}
+
+/* end datatables style */
+
+/*start general card style */
+
+main section .card {
+    background-color: var(--color-white) !important;
+    padding: 30px;
+}
+
+main section .card-title {
+    padding: 15px;
+    border: 1px dashed rgb(110 174 213);
+    border-radius: 5px;
+}
+
+.main-title span {
+    color: var(--color-dark);
+}
+
+main section .card-title  .main-title-icon {
+    background-color: #99b1b724;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #787884d4;
+    border-radius: 5px;
+    
+}
+/* end general card style */
+
+/* start modal */
+
+
+.modal .modal-content {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.modal .form-floating .form-control {
+    background-color: var(--color-input);
+    border: 1px solid var(--color-border);
+}
+
+.modal .form-floating .form-control:focus {
+    background-color: var(--color-input);
+}
+
+.modal .form-floating .form-select {
+    background-color: var(--color-input);
+    border: 1px solid var(--color-border);
+}
+
+.modal .form-floating .form-select:focus {
+    background-color: var(--color-input);
+}
+
+.clinic-image-container {
+    border: 1px solid #e9e7e7;
+    width: 100%;
+    height: 300px;
+    padding: 5px;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 20px;
+
+}
+
+.clinic-image-container img {
+    width: 100%;
+    height: 100%;
+}
+/* end modal */
+
+/*overlay*/
+.lightBox-overlay {
+    background-color: #000000ad;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1000;
+    transition: opacity 0.3s linear;
+    position: fixed;
+  }
+  
+  .lightBox-overlay .image-center-container {
+    width: 50%;
+    height: 500px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #676767;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .lightBox-overlay .image-center-container {
+  
+      height: 300px;
+  
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .lightBox-overlay .image-center-container {
+  
+      height: 250px;
+  
+    }
+  }
+  
+  .lightBox-overlay .image-center-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  
+  }
+  
+  .lightbox-arrow  {
+    background-color: #7367f052;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+  
+  }
+  
+  .lightbox-arrow-left {
+    left: 50px;
+  }
+  
+  .lightbox-arrow-right {
+    right: 50px;
+  }
+  

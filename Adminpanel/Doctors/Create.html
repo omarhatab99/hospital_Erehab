@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../public/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Doctor</title>
+    <!-- vendor libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="/sources/core.css">
+    <link rel="stylesheet" href="/sources/demo.css">
+    <link rel="stylesheet" href="/sources/docs.css">
+    
+    <!-- project custom style -->
+    <link rel="stylesheet" href="assets/css/doctors.css">
+</head>
+<body>
+    <!-- start loading -->
+    <div class="overlay-loading">
+        <img src="/images/loading.gif" width="150" />
+    </div>
+    <!-- start header -->
+    <section id="header" class="header"></section>
+    <!-- end header -->
+    <div class="container pt-5">
+        <div class="card">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+                <div class="main-title d-flex justify-content-center align-items-center" style="font-size: 16px;">
+                    <span class="main-title-icon" style="margin-right:10px;">
+                        <span class="material-icons-sharp">
+                            person
+                        </span>
+                    </span>
+                    <span data-i18n="createdoctors">Doctors</span>
+                </div>
+                <a href="../Dashboard/Home.html" class="btn btn-primary btn-sm" data-i18n="back">Back to list</a>
+            </h5>   
+            <div class="card-body">
+                <form method="post" id="doctorsForm" class="doctors-form">
+                    <div class="errorList text-danger" style="padding: 30px"></div>
+                    <div class="row">
+                        <div class="col-md-8 col-12" style="margin-bottom: 20px;">
+                                <!-- product images -->
+                                <div class="upload-card">
+                                    <div class="top">
+                                        <p data-i18n="imageUploading">image uploading...</p>
+                                        <button type="button" class="btn btn-primary btn-sm" data-i18n="upload">Upload</button>
+                                    </div>
+                                    <div class="form-upload" class="dragover">
+                                        <span class="inner select" data-i18n="uploadingImageHere">
+                                            upload image here
+                                        </span>
+                                        <input type="file" name="profileImage" id="" class="file">
+                                    </div>
+                                    <div class="image-container">
+                                        <div class="image">
+                                            <img src="assets/images/avatar-placeholder.png" alt="image">
+                                            <span>&times;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 preview-img" style="margin-bottom: 20px;">
+                            <div class="w-100" style="height: 350px; box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                                <img id="previewImg" src="assets/images/avatar-placeholder.png" alt="placeholder" class="w-100 h-100">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <!-- doctor name -->
+                            <div class="form-floating mb-3" dir="ltr">
+                                <input type="text" class="form-control" name="name" id="doctorName" placeholder="name">
+                                <label for="doctorName" data-i18n="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <!-- doctor Specialization -->
+                            <div class="form-floating mb-3" dir="ltr">
+                                <input type="text" class="form-control" name="specialization" id="doctorSpecialization" placeholder="specialization">
+                                <label for="doctorSpecialization" data-i18n="specialization">Specialization</label>
+                            </div>
+                        </div>
+                        <div class="col-12" style="margin-bottom: 10px;">
+                            <textarea id="default-editor" name="description" placeholder="Description about doctor...">
+                            </textarea>
+                        </div>
+                        <div class="col-12" style="margin-top: 10px;">
+                            <button type="submit" id="submitDoctors" class="btn btn-primary d-flex align-items-center" data-i18n="add">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="py-2 w-100 d-flex justify-content-end align-items-center lang-container" style="position: relative;">
+            <div id="langContainer" class="lang-selector" style="margin: 0px 50px;"><!--Generated by javascript--></div>
+        </div>
+    </div>
+    <!-- vendor libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/fontawesome.min.js" integrity="sha512-C8qHv0HOaf4yoA7ISuuCTrsPX8qjolYTZyoFRKNA9dFKnxgzIHnYTOJhXQIt6zwpIFzCrRzUBuVgtC4e5K1nhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tiny.cloud/1/6910ovn90iq077vnhrmndo41c1k30nreopfg5cer8jp5195v/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!-- Project custom scripts -->
+    <script src="../Shared/DashboardLayout.js" type="module"></script>
+    <script src="/sources/LangaugeSelector.js" type="module"></script>
+    <script src="assets/js/create.js" type="module"></script>
+</body>
+</html>
